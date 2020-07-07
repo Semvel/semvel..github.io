@@ -147,7 +147,9 @@ html, body {
 	position: absolute;
 	left: 0;
 }
-
+.logo:hover {
+	opacity: 0.8;
+}
 .card:hover, 
 .nav a:hover {
 	color: #fb565a;
@@ -495,6 +497,7 @@ footer {
 .social ul{
 	display: flex;
 }
+
 .social a {
 	display: block;
 	background-color: #e1e1e1;
@@ -506,7 +509,7 @@ footer {
 	margin-right: 12px;
 }
 
-.social img{
+.social svg{
 	vertical-align: middle;
 }
 
