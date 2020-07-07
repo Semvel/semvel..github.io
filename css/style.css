@@ -203,11 +203,9 @@ html, body {
 .learn-more-button:active {
 	box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	background-color: #d7373b;
-	
+	color: rgba(255, 255, 255, 0.3);	
 }
-.learn-more-button span:active {
-	opacity: 0.3;
-}
+
 .services {
 	display: flex;
 	justify-content: space-between;
@@ -239,11 +237,9 @@ html, body {
 .services-web a:active {
 	box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	background-color: #d7373b;
+	color: rgba(255, 255, 255, 0.3);
+}
 
-}
-.services-web a span:active {
-	opacity: 0.3;
-}
 
 .services-app a:hover {
 	background-color: #00bc6c;
@@ -251,10 +247,9 @@ html, body {
 .services-app a:active {
 	box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	background-color: #00aa62;
+	color: rgba(255, 255, 255, 0.3);
 }
-.services-app a span:active {
-	opacity: 0.3;
-}
+
 
 .services-presentation a:hover {
 	background-color: #eab534;
@@ -262,9 +257,7 @@ html, body {
 .services-presentation a:active {
 	box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	background-color: #e5a722;
-}
-.services-presentation a span:active {
-	opacity: 0.3;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .services h3 {
@@ -470,7 +463,7 @@ html, body {
 	line-height: 18px;
 }
 
-.contacts-container button {
+.write-us-button {
 	width: 219px;
 	height: 50px;
 	background-color: #fb565a;
@@ -479,6 +472,18 @@ html, body {
 	line-height: 18px;
 	text-transform: uppercase;
 }
+
+.write-us-button:hover {
+	background-color: #e74246;
+}
+.write-us-button:active {
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+	background-color: #d7373b;
+}
+
+
+
 
 footer {
 	display: flex;
