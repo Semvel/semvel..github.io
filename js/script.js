@@ -1,3 +1,4 @@
+// подмена видео
 function findVideos() {
     let videos = document.querySelectorAll('.video');
     
@@ -42,3 +43,30 @@ function generateURL(id) {
 }
 
 findVideos();
+
+//скрипт слайдера
+
+$(document).ready(function(){
+	$('.block-2__slider').slick({
+		arrows:true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+		responsive:[
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow:2
+				}
+			},
+			{
+				breakpoint: 550,
+				settings: {
+					slidesToShow:1
+				}
+			}
+		]
+	});
+});
+

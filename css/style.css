@@ -143,15 +143,15 @@ h6 {
 /*--------------------*/
 
 .bg-1 {
-  height: 1500px;
-  background: -o-linear-gradient(238deg, #cef9f6 0%, white 100%);
-  background: linear-gradient(212deg, #cef9f6 0%, white 100%);
-  /* w3c */
+  min-height: 1500px;
+  background: url(/img/petals-bg.png) top center no-repeat, -o-linear-gradient(238deg, #cef9f6 0%, white 100%);
+  background: url(/img/petals-bg.png) top center no-repeat, linear-gradient(212deg, #cef9f6 0%, white 100%);
 }
 
 .wrapper {
-  width: 1170px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header {
@@ -161,6 +161,49 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.icon-messenger {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 37px;
+  height: 37px;
+}
+
+.icon-telegram {
+  background-image: url(../img/sprite.png);
+  background-position: -37px -37px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -74px 0px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-whatsapp {
+  background-image: url(../img/sprite.png);
+  background-position: -74px -36px;
+  width: 36px;
+  height: 36px;
+}
+
+.red-button {
+  display: block;
+  padding: 25px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#dd2b2b), color-stop(1%, #dd2b2b), to(#fda5a5));
+  background: -o-linear-gradient(bottom, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
+  background: linear-gradient(0deg, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
+  /* w3c */
+  border-radius: 50px;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 2px 2px 0px #b6003f;
+          box-shadow: 0px 2px 2px 0px #b6003f;
+  font-size: 24px;
+  font-family: 'intro', sans-serif;
 }
 
 .logo {
@@ -173,7 +216,7 @@ h6 {
 .logo .title {
   margin-left: 18px;
   margin-top: 10px;
-  width: 300px;
+  max-width: 300px;
 }
 
 .logo h1 {
@@ -200,7 +243,7 @@ h6 {
 .contacts h3 {
   font-family: 'agavalanchec', sans-serif;
   font-size: 15px;
-  width: 160px;
+  max-width: 160px;
   text-align: right;
   margin-right: 22px;
 }
@@ -254,6 +297,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 85px;
 }
 
 .block-1 .left-column {
@@ -264,7 +308,7 @@ h6 {
 .block-1 .left-column h2 {
   margin-left: 15px;
   margin-bottom: 55px;
-  width: 510px;
+  max-width: 510px;
   font-size: 35px;
 }
 
@@ -272,26 +316,12 @@ h6 {
   font-size: 25px;
 }
 
-.block-1 .left-column button {
-  padding: 25px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#dd2b2b), color-stop(1%, #dd2b2b), to(#fda5a5));
-  background: -o-linear-gradient(bottom, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
-  background: linear-gradient(0deg, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
-  /* w3c */
-  border-radius: 50px;
-  font-size: 15px;
-  color: #ffffff;
-  -webkit-box-shadow: 0px 2px 2px 0px #b6003f;
-          box-shadow: 0px 2px 2px 0px #b6003f;
-  font-size: 24px;
-  margin-bottom: 24px;
-}
-
 .block-1 .left-column p {
   font-family: 'agavalanchec', sans-serif;
   font-weight: 700;
   font-size: 16px;
   text-align: center;
+  margin-top: 24px;
 }
 
 .block-1 .video {
@@ -317,37 +347,217 @@ h6 {
 }
 
 .video__media {
-  width: 505px;
-  height: 388px;
+  max-width: 505px;
+  max-height: 388px;
 }
 
-.icon-messenger {
+.block-2 .block-2__title {
+  text-align: center;
+  font-family: 'intro', sans-serif;
+  font-size: 35px;
+}
+
+.block-2 .block-2__description {
+  margin-top: 20px;
+  font-family: 'agavalanchec', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  color: #e54949;
+}
+
+.block-2__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block-2__wrapper .relative {
+  position: relative;
+}
+
+.block-2__wrapper .slider-description {
+  position: absolute;
+  left: 68px;
+  top: 480px;
+  font-family: 'agavalanchec', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #12b7a9;
+}
+
+.block-2__slider {
+  position: relative;
+  padding: 0px 45px;
+  max-height: 390px;
+  margin-top: 80px;
+  /* Основные стили */
+  /* Слайдер */
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+}
+
+.block-2__slider .slick-slider {
+  min-width: 0;
+}
+
+.block-2__slider .slick-list {
+  max-width: 550px;
+  overflow: hidden;
+}
+
+.block-2__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.block-2__slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -25px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 4px 0px #cecece;
+          box-shadow: 0px 1px 4px 0px #cecece;
+}
+
+.block-2__slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/sl-arrow_l.svg") 20px center/7px 12px no-repeat, -webkit-gradient(linear, left top, left bottom, from(white), to(#9bfff7));
+  background: url("../img/sl-arrow_l.svg") 20px center/7px 12px no-repeat, -o-linear-gradient(top, white 0%, #9bfff7 100%);
+  background: url("../img/sl-arrow_l.svg") 20px center/7px 12px no-repeat, linear-gradient(180deg, white 0%, #9bfff7 100%);
+}
+
+.block-2__slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/sl-arrow_r.svg") 22px center/7px 12px no-repeat, -webkit-gradient(linear, left top, left bottom, from(white), to(#9bfff7));
+  background: url("../img/sl-arrow_r.svg") 22px center/7px 12px no-repeat, -o-linear-gradient(top, white 0%, #9bfff7 100%);
+  background: url("../img/sl-arrow_r.svg") 22px center/7px 12px no-repeat, linear-gradient(180deg, white 0%, #9bfff7 100%);
+}
+
+.block-2__slider .slider__item {
+  padding: 0px 15px;
+}
+
+.block-2__slider .slider__item img {
+  max-width: 100%;
+}
+
+.advantages {
+  margin-top: 80px;
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.advantages h3 {
+  font-family: 'intro', sans-serif;
+  color: #e54949;
+  margin-bottom: 35px;
+  margin-left: 45px;
+  position: relative;
+}
+
+.advantages p {
+  font-family: 'agavalanchec', sans-serif;
+  font-weight: 700;
+  margin-bottom: 35px;
+  margin-left: 5px;
+}
+
+.advantages p:nth-of-type(2) {
+  max-width: 450px;
+}
+
+.advantages .medal::before {
+  content: '';
+  position: absolute;
+  left: -45px;
+  top: -7px;
   background-image: url(../img/sprite.png);
-  background-position: 0px 0px;
+  background-position: -110px 0px;
+  width: 31px;
+  height: 38px;
+}
+
+.advantages .photo-icon::before {
+  content: '';
+  position: absolute;
+  left: -45px;
+  top: -9px;
+  background-image: url(../img/sprite.png);
+  background-position: -37px 0px;
   width: 37px;
   height: 37px;
 }
 
-.icon-telegram {
-  background-image: url(../img/sprite.png);
-  background-position: -37px 0px;
-  width: 36px;
-  height: 36px;
-}
-
-.icon-vk {
+.advantages .star::before {
+  content: '';
+  position: absolute;
+  left: -45px;
+  top: -10px;
   background-image: url(../img/sprite.png);
   background-position: 0px -37px;
-  width: 36px;
+  width: 37px;
   height: 36px;
 }
 
-.icon-whatsapp {
-  background-image: url(../img/sprite.png);
-  background-position: -36px -37px;
-  width: 36px;
-  height: 36px;
+.block-3 {
+  padding-bottom: 70px;
+  background: url(/img/tape-bg.png) no-repeat;
 }
+
+.block-3 h2 {
+  font-family: 'intro', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  padding-top: 90px;
+}
+
+.block-3 .red-button {
+  margin: 70px auto 0;
+}
+
+.breeds {
+  height: 465px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 34px 40px 25px 60px;
+  font-family: 'agavalanchec', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.breeds .breeds__item {
+  padding-right: 20px;
+}
+
+.breeds h3,
+.breeds p {
+  margin-top: 20px;
+}
+
+.webp .bg-1{ background: url(/img/petals-bg.webp) top center no-repeat, -o-linear-gradient(238deg, #cef9f6 0%, white 100%); }
+
+.webp .bg-1{ background: url(/img/petals-bg.webp) top center no-repeat, linear-gradient(212deg, #cef9f6 0%, white 100%); }
 
 .webp .icon-messenger{ background-image: url(../img/sprite.webp); }
 
@@ -356,3 +566,11 @@ h6 {
 .webp .icon-vk{ background-image: url(../img/sprite.webp); }
 
 .webp .icon-whatsapp{ background-image: url(../img/sprite.webp); }
+
+.webp .advantages .medal::before{ background-image: url(../img/sprite.webp); }
+
+.webp .advantages .photo-icon::before{ background-image: url(../img/sprite.webp); }
+
+.webp .advantages .star::before{ background-image: url(../img/sprite.webp); }
+
+.webp .block-3{ background: url(/img/tape-bg.webp) no-repeat; }
