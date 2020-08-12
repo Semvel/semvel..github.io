@@ -70,3 +70,29 @@ $(document).ready(function(){
 	});
 });
 
+
+$(document).ready(function(){
+	$('.reviews').slick({
+		arrows:true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        speed: 500,
+        dots:true,
+        cssEase: 'linear',
+		responsive:[
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow:2
+				}
+			},
+			{
+				breakpoint: 550,
+				settings: {
+					slidesToShow:1
+				}
+			}
+		]
+	});
+});

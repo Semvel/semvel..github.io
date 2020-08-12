@@ -144,12 +144,12 @@ h6 {
 
 .bg-1 {
   min-height: 1500px;
-  background: url(/img/petals-bg.png) top center no-repeat, -o-linear-gradient(238deg, #cef9f6 0%, white 100%);
-  background: url(/img/petals-bg.png) top center no-repeat, linear-gradient(212deg, #cef9f6 0%, white 100%);
+  background: url(../img/petals-bg.png) top center no-repeat, -o-linear-gradient(238deg, #cef9f6 0%, white 100%);
+  background: url(../img/petals-bg.png) top center no-repeat, linear-gradient(212deg, #cef9f6 0%, white 100%);
 }
 
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -513,7 +513,7 @@ h6 {
 
 .block-3 {
   padding-bottom: 70px;
-  background: url(/img/tape-bg.png) no-repeat;
+  background: url(../img/tape-bg.png) no-repeat;
 }
 
 .block-3 h2 {
@@ -555,9 +555,137 @@ h6 {
   margin-top: 20px;
 }
 
-.webp .bg-1{ background: url(/img/petals-bg.webp) top center no-repeat, -o-linear-gradient(238deg, #cef9f6 0%, white 100%); }
+.block-4 {
+  min-height: 847px;
+  background: url(../img/wood-bg.jpg);
+}
 
-.webp .bg-1{ background: url(/img/petals-bg.webp) top center no-repeat, linear-gradient(212deg, #cef9f6 0%, white 100%); }
+.block-4 h2 {
+  font-family: 'intro', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.block-4 .reviews__item {
+  position: relative;
+  width: 285px;
+  height: 570px;
+  background: url(../img/phone.png) 0 0 no-repeat;
+}
+
+.block-4 .red-button {
+  margin: 40px auto 20px;
+}
+
+.reviews {
+  position: relative;
+  margin: 0 50px;
+  /* Основные стили */
+  /* Слайдер */
+  /* Ограничивающая оболочка */
+  /* Лента слайдов */
+}
+
+.reviews .slick-slider {
+  min-width: 0;
+}
+
+.reviews .slick-list {
+  max-width: 920px;
+  overflow: hidden;
+  margin: 0 113px;
+}
+
+.reviews .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.reviews .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -25px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 4px 0px #cecece;
+          box-shadow: 0px 1px 4px 0px #cecece;
+}
+
+.reviews .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/sl-arrow_l-2.svg") 20px center/7px 12px no-repeat, -webkit-gradient(linear, left bottom, left top, from(#dd2b2b), color-stop(1%, #dd2b2b), to(#fda5a5));
+  background: url("../img/sl-arrow_l-2.svg") 20px center/7px 12px no-repeat, -o-linear-gradient(bottom, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
+  background: url("../img/sl-arrow_l-2.svg") 20px center/7px 12px no-repeat, linear-gradient(0deg, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
+  -webkit-box-shadow: 0px 2px 2px 1px #b6003f;
+          box-shadow: 0px 2px 2px 1px #b6003f;
+}
+
+.reviews .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/sl-arrow_r-2.svg") 22px center/7px 12px no-repeat, -webkit-gradient(linear, left bottom, left top, from(#dd2b2b), color-stop(1%, #dd2b2b), to(#fda5a5));
+  background: url("../img/sl-arrow_r-2.svg") 22px center/7px 12px no-repeat, -o-linear-gradient(bottom, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
+  background: url("../img/sl-arrow_r-2.svg") 22px center/7px 12px no-repeat, linear-gradient(0deg, #dd2b2b 0%, #dd2b2b 1%, #fda5a5 100%);
+  -webkit-box-shadow: 0px 2px 2px 1px #b6003f;
+          box-shadow: 0px 2px 2px 1px #b6003f;
+}
+
+.reviews .reviews__item {
+  position: relative;
+  padding: 0 15px;
+}
+
+.reviews .reviews__item img {
+  position: absolute;
+  left: 20px;
+  top: 65px;
+  max-width: 100%;
+  width: 224px;
+}
+
+.reviews .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reviews .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.reviews .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.reviews .slick-dots li.slick-active button {
+  background-color: #f48584;
+}
+
+.webp .bg-1{ background: url(../img/petals-bg.webp) top center no-repeat, -o-linear-gradient(238deg, #cef9f6 0%, white 100%); }
+
+.webp .bg-1{ background: url(../img/petals-bg.webp) top center no-repeat, linear-gradient(212deg, #cef9f6 0%, white 100%); }
 
 .webp .icon-messenger{ background-image: url(../img/sprite.webp); }
 
@@ -573,4 +701,8 @@ h6 {
 
 .webp .advantages .star::before{ background-image: url(../img/sprite.webp); }
 
-.webp .block-3{ background: url(/img/tape-bg.webp) no-repeat; }
+.webp .block-3{ background: url(../img/tape-bg.webp) no-repeat; }
+
+.webp .block-4{ background: url(../img/wood-bg.webp); }
+
+.webp .block-4 .reviews__item{ background: url(../img/phone.webp) 0 0 no-repeat; }
