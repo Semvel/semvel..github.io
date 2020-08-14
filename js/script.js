@@ -449,3 +449,21 @@ for (i = 0; i < faqButton.length; i++) {
     } 
   });
 }
+
+// показать больше 
+
+let moreBow = document.querySelector('.block-7__list');
+let moreBowButton = document.querySelector('.block-7 > .red-button');
+
+moreBowButton.onclick = function () {
+    if (moreBow.classList.contains('show')) {
+        moreBow.classList.remove('show');
+        moreBowButton.textContent = 'показать еще бантики'; 
+        moreBow.style.maxHeight = 700 + 'px';
+    } else {
+        moreBow.classList.add('show');
+        moreBowButton.textContent = 'скрыть'; 
+        moreBow.style.maxHeight = moreBow.scrollHeight + 'px';
+    }
+    
+}

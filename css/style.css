@@ -870,6 +870,9 @@ h6 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-height: 700px;
+  -webkit-transition: max-height 0.5s ease-out;
+  -o-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out;
   overflow: hidden;
   max-width: 1430px;
   margin: 0 auto;
@@ -886,6 +889,12 @@ h6 {
   margin: 30px auto 50px;
   font-size: 18px;
   padding: 10px 60px;
+}
+
+.block-7 .show {
+  -webkit-transition: max-height 0.5s ease-out;
+  -o-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 .block-7__item {
