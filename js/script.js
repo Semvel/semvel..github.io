@@ -450,7 +450,7 @@ for (i = 0; i < faqButton.length; i++) {
   });
 }
 
-// показать больше 
+// показать больше бантиков
 
 let moreBow = document.querySelector('.block-7__list');
 let moreBowButton = document.querySelector('.block-7 > .red-button');
@@ -464,6 +464,77 @@ moreBowButton.onclick = function () {
         moreBow.classList.add('show');
         moreBowButton.textContent = 'скрыть'; 
         moreBow.style.maxHeight = moreBow.scrollHeight + 'px';
+        moreBow.scrollIntoView({block: "center", behavior: "smooth"});
     }
     
+}
+
+
+
+//показать больше видео-обзоров 
+
+let moreVideo = document.querySelector('.block-9__container');
+let moreVideoButton = document.querySelector('.block-9 > .red-button');
+
+moreVideoButton.onclick = function () {
+    if (moreVideo.classList.contains('show')) {
+        moreVideo.classList.remove('show');
+        moreVideoButton.textContent = 'посмотрите видео-обзоры других бантиков'; 
+        moreVideo.style.maxHeight = 325 + 'px';
+    } else {
+        moreVideo.classList.add('show');
+        moreVideoButton.textContent = 'скрыть'; 
+        moreVideo.style.maxHeight = moreVideo.scrollHeight + 'px';
+        moreVideo.scrollIntoView({block: "center", behavior: "smooth"});
+    }
+    
+}
+
+//открыть квиз
+let body = document.querySelector('body');
+
+let quiz = document.querySelector('.quiz');
+let openQuizButton = document.querySelectorAll('.open-quiz');
+let closeQuizButton = document.querySelector('.close-button');
+
+
+closeQuizButton.onclick = function () {
+    if (quiz.classList.contains('quiz-show')) {
+        quiz.classList.remove('quiz-show');
+        body.style.overflowY = 'visible';
+    }
+}
+
+for (i = 0; i < openQuizButton.length; i++) {
+    openQuizButton[i].onclick = function () {
+        quiz.classList.add('quiz-show');
+        body.style.overflowY = 'hidden';
+    }
+}
+
+//Попап с конкретными бантиками
+
+let popup = document.querySelector('.popup');
+let openPopupButton = document.querySelectorAll('.block-7__item > button');
+let openPopupButton_array = Array.prototype.slice.call(openPopupButton);
+let imgPopup = document.querySelector('.popup__window img');
+let sourcePopup = document.querySelector('.popup__window source');
+
+/*
+closeButton.onclick = function () {
+    if (quiz.classList.contains('quiz-show')) {
+        quiz.classList.remove('quiz-show');
+    }
+}
+*/
+
+for (i = 0; i < openPopupButton.length; i++) {
+    openPopupButton[i].setAttribute('data-key', i + 1);
+    let key = openPopupButton[i].dataset.key;
+    openPopupButton[i].onclick = function () {
+        imgPopup.src = '/img/' + key + '.jpg';
+        sourcePopup.srcset = '/img/' + key + '.webp';
+        popup.classList.add('popup-show');
+        body.style.overflowY = 'hidden';
+    }
 }
