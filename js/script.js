@@ -1,3 +1,5 @@
+let body = document.querySelector('body');
+
 // подмена видео1
 function findVideos() {
     let videos = document.querySelectorAll('.video');
@@ -389,21 +391,7 @@ $(document).ready(function(){
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear',
-		responsive:[
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow:2
-				}
-			},
-			{
-				breakpoint: 550,
-				settings: {
-					slidesToShow:1
-				}
-			}
-		]
+        cssEase: 'linear'		
 	});
 });
 
@@ -419,15 +407,17 @@ $(document).ready(function(){
         cssEase: 'linear',
 		responsive:[
 			{
-				breakpoint: 768,
+				breakpoint: 1030,
 				settings: {
-					slidesToShow:2
+                    slidesToShow:2,
+                    slidesToScroll: 2
 				}
 			},
 			{
-				breakpoint: 550,
+				breakpoint: 778,
 				settings: {
-					slidesToShow:1
+					slidesToShow:1,
+                    slidesToScroll: 1
 				}
 			}
 		]
@@ -490,43 +480,23 @@ moreVideoButton.onclick = function () {
     
 }
 
-//открыть квиз
-let body = document.querySelector('body');
-
-let quiz = document.querySelector('.quiz');
-let openQuizButton = document.querySelectorAll('.open-quiz');
-let closeQuizButton = document.querySelector('.close-button');
-
-
-closeQuizButton.onclick = function () {
-    if (quiz.classList.contains('quiz-show')) {
-        quiz.classList.remove('quiz-show');
-        body.style.overflowY = 'visible';
-    }
-}
-
-for (i = 0; i < openQuizButton.length; i++) {
-    openQuizButton[i].onclick = function () {
-        quiz.classList.add('quiz-show');
-        body.style.overflowY = 'hidden';
-    }
-}
-
 //Попап с конкретными бантиками
 
 let popup = document.querySelector('.popup');
+let popupWindow = document.querySelector('.popup__window');
 let openPopupButton = document.querySelectorAll('.block-7__item > button');
 let openPopupButton_array = Array.prototype.slice.call(openPopupButton);
 let imgPopup = document.querySelector('.popup__window img');
 let sourcePopup = document.querySelector('.popup__window source');
+let closePopupButton = document.querySelector('.close-button-popup');
 
-/*
-closeButton.onclick = function () {
-    if (quiz.classList.contains('quiz-show')) {
-        quiz.classList.remove('quiz-show');
+closePopupButton.onclick = function () {
+    if (popup.classList.contains('popup-show')) {
+        popup.classList.remove('popup-show');
+        popupWindow.classList.remove('popup-animated');       
+        body.style.overflowY = 'visible';
     }
 }
-*/
 
 for (i = 0; i < openPopupButton.length; i++) {
     openPopupButton[i].setAttribute('data-key', i + 1);
@@ -535,6 +505,50 @@ for (i = 0; i < openPopupButton.length; i++) {
         imgPopup.src = '/img/' + key + '.jpg';
         sourcePopup.srcset = '/img/' + key + '.webp';
         popup.classList.add('popup-show');
+        popupWindow.classList.add('popup-animated');
         body.style.overflowY = 'hidden';
+    }
+}
+
+//попап обратного звонка 
+
+let popupСallback = document.querySelector('.popup-callback');
+let popupСallbackWindow = document.querySelector('.popup-callback__window');
+let openСallbackPopupButton = document.querySelectorAll('.button-popup-callback');
+let closeСallbackPopupButton = document.querySelector('.close-button-popup-callback');
+
+for (i = 0; i < openСallbackPopupButton.length; i++) {
+    openСallbackPopupButton[i].onclick = function () {
+        popupСallback.classList.add('popup-show');
+        popupСallbackWindow.classList.add('popup-animated');
+        body.style.overflowY = 'hidden';
+    }
+}
+closeСallbackPopupButton.onclick = function () {
+    if (popupСallback.classList.contains('popup-show')) {
+        popupСallback.classList.remove('popup-show');
+        popupСallbackWindow.classList.remove('popup-animated');       
+        body.style.overflowY = 'visible';
+    }
+}
+
+//попап с отправкой каталога
+
+let popupСatalog = document.querySelector('.popup-catalog');
+let popupСatalogWindow = document.querySelector('.popup-catalog__window');
+let openСatalogPopupButton = document.querySelector('.button-popup-catalog');
+let closeСatalogPopupButton = document.querySelector('.close-button-popup-catalog');
+
+openСatalogPopupButton.onclick = function () {
+    popupСatalog.classList.add('popup-show');
+    popupСatalogWindow.classList.add('popup-animated');
+    body.style.overflowY = 'hidden';
+}
+
+closeСatalogPopupButton.onclick = function () {
+    if (popupСatalog.classList.contains('popup-show')) {
+        popupСatalog.classList.remove('popup-show');
+        popupСatalogWindow.classList.remove('popup-animated');       
+        body.style.overflowY = 'visible';
     }
 }
