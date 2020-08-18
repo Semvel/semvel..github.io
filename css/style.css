@@ -2053,6 +2053,7 @@ a.red-button {
 
   .block-1 .video {
     width: 400px;
+    min-width: 0;
   }
 
   .block-1 .video .video__media {
@@ -2310,6 +2311,38 @@ a.red-button {
 
   .block-2__slider .slick-list {
     max-width: 350px;
+  }
+}
+
+@media (max-width: 560px) {
+  .popup__window {
+    margin: 40px 0px 0px;
+    max-width: 100%;
+  }
+
+  .close-button-popup {
+    right: 10px;
+    top: -31px;
+  }
+
+  .popup-callback__window {
+    margin: 40px 0px 0px;
+    max-width: 100%;
+  }
+
+  .close-button-popup-callback {
+    right: 10px;
+    top: -31px;
+  }
+
+  .popup-catalog__window {
+    margin: 40px 0px 0px;
+    max-width: 100%;
+  }
+
+  .close-button-popup-catalog {
+    right: 10px;
+    top: -31px;
   }
 }
 
@@ -2638,6 +2671,56 @@ a.red-button {
 
   .call-back-2 form input {
     padding: 10px 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .popup__window form {
+    padding: 20px 20px;
+  }
+
+  .popup__window form h3 {
+    font-size: 17px;
+  }
+
+  .popup__window form input {
+    font-size: 16px;
+  }
+
+  .popup__window form select {
+    font-size: 16px;
+  }
+
+  .popup-callback__window form {
+    padding: 20px 20px;
+  }
+
+  .popup-callback__window form h3 {
+    font-size: 17px;
+  }
+
+  .popup-callback__window form input {
+    font-size: 16px;
+  }
+
+  .popup-callback__window form select {
+    font-size: 16px;
+  }
+
+  .popup-catalog__window form {
+    padding: 20px 20px;
+  }
+
+  .popup-catalog__window form h3 {
+    font-size: 17px;
+  }
+
+  .popup-catalog__window form input {
+    font-size: 16px;
+  }
+
+  .popup-catalog__window form select {
+    font-size: 16px;
   }
 }
 
