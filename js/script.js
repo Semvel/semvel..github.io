@@ -1,18 +1,25 @@
+let body = document.querySelector('body');
 // меню бургер
 const menuBtn = document.querySelector('.menu-icon');
 const menuContainer = document.querySelector('.menu-container');
-
+const menuWrapper = document.querySelector('.nav-wrapper');
 menuBtn.onclick = function() {
     if (menuContainer.classList.contains('closed')) {
         menuContainer.classList.remove('closed');
         menuContainer.classList.add('opened');
         menuBtn.classList.remove('closed');
         menuBtn.classList.add('opened');
+        body.style.overflowY = 'hidden';
+        menuWrapper.classList.add('popup-show');
+        
+        
     } else if (menuContainer.classList.contains('opened')) {
         menuContainer.classList.remove('opened');
         menuContainer.classList.add('closed');
         menuBtn.classList.remove('opened');
         menuBtn.classList.add('closed');
+        body.style.overflowY = 'visible';
+        menuWrapper.classList.remove('popup-show');
     }
   }
 
