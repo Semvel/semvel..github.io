@@ -35,23 +35,15 @@ $('.characters .slider').slick({
     arrows: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 639,
         settings: {
           arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
+          centerMode: false,
+          centerPadding: '50px',
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
+      }      
     ]
   });
 
@@ -67,7 +59,10 @@ $('.show-list .slider').slick({
 $('.reviews .slider').slick({
     infinite: true,
     speed: 300,
-    slidesToShow: 1
+    slidesToShow: 1,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
   });
 
 // четвертый слайдер playgrounds 
