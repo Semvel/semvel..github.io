@@ -204,6 +204,10 @@ body {
   margin-right: 40px;
 }
 
+.right-column__social a:hover {
+  text-decoration: underline;
+}
+
 .right-column__more-pictures {
   position: absolute;
   right: 100px;
